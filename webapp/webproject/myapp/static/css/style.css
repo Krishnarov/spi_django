@@ -1,0 +1,97 @@
+
+#outer{
+    height:1200px;
+    width: 1000px;
+    
+    margin:auto;
+}
+#heder{
+    height: 150px;
+    width:1000px;
+    
+}
+#logo{
+    height: 150px;
+    width: 150px;
+    background-color:rgba(0, 0, 128, 0.676);
+    float:left;
+}
+#banner{
+    height: 150px;
+    width:850px;
+    text-align: center;
+    background-color:rgba(0, 0, 128, 0.676);
+    font-size: 50px;
+    line-height: 150px;
+    color: aliceblue;
+    float: right;
+}
+#menu{
+    height: 50px;
+    width:998px;
+    background-color: white;
+    border: 1px solid white;
+    margin-top:5px;
+    
+}
+#menu ul{
+    list-style-type: none;
+    
+}
+#menu ul li{
+    display:inline;
+    padding: 18px;
+    align-items: center;
+    
+}
+#menu ul li a:hover{
+color:red;
+}
+#menu ul li:hover{
+    background-color:rgba(0, 13, 255, 0.946);
+    border-radius: 10%;
+    }
+#menu ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+   
+
+}
+
+
+
+#slider{
+    height: 200px;
+    width: 1000px;
+    background-color:gray;
+    margin-top: 5px;
+
+}
+#root{
+    height:600px;
+    width:1000px;
+    margin-top: 5px;
+}
+#left{
+    height: 600px;
+    width: 300px;
+    background-color:aqua;
+    float: left;
+}
+#right{
+    height: 600px;
+    width: 700px;
+    background-color:rgb(231, 20, 171);
+    float: right;
+}
+#footer{
+    height: 180px;
+    width: 1000px;
+    background-color: black;
+    margin-top: 5px;
+    color: aliceblue;
+    font-size: 50px;
+    text-align: center;
+    line-height: 180px;
+}

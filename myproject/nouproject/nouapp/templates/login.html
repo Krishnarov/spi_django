@@ -1,0 +1,90 @@
+{% extends "parent.html" %}
+{%block main%}
+
+{% if messages %}
+    {% for msgs in messages %}
+    <div class="alert-warning alert-dismissible fade show" role="alert">
+        <strong> {{msgs}}</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close"></button>
+    </div>
+     {% endfor %}
+     {% endif %}
+<h2 style="text-align:center;"><u>User Login</u></h2>
+<form class="form-group" method="post" action="{% url 'nouapp:login' %}" id="frmlogin" onsubmit="event.preventDefault();validate();">
+{% csrf_token %}
+      
+
+    <table class="table" style="margin:auto; width:80%;">
+    <tr>
+        <td>Enter Userid/ roll no </td>
+        <td>
+            <input type="text" name='userid'class="form-control" id ="userid"/>
+        </td>
+    </tr>
+    <tr>
+        <td>Enter your Password</td>
+        <td>
+            <input type="password" name="password" class="form-control" id="password"/>
+        </td>
+
+    </tr>
+    <tr>
+<td>select usertype</td>
+<td>
+<select name="usertype" class="form-control">
+    <option>--select usertype--</option>
+    <option value="student">Student</option>
+    <option value="admin">Admin</option>
+</select>
+</td>
+    </tr>
+<tr>
+    <td>&nbsp;</td>
+    <td>
+        <button type="submit" class="btn btn-success"> Login </button>
+    </td>
+</tr>
+
+
+
+</table>
+</from>
+<script>
+    function validate()
+    {
+        var userid=document.getElementById("userid");
+        var password=document.getElementById("password");
+        if( userid.value=="" || userid.value==null)
+        {
+            alert("Please Enter Userid")
+            userid.focus();
+
+
+        }
+       
+         else if( password.value=="" || password.value==null)
+        {
+            alert("Please Enter Password")
+            password.focus();
+
+
+        }
+        else 
+        {
+            document.getElementById("frmlogin").submit();
+            
+
+
+        }
+        
+
+
+    }
+
+
+
+
+
+</script>
+
+{%endblock main%}

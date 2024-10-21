@@ -1,0 +1,154 @@
+
+<html>
+<head>
+	<style type="text/css">
+		.main_outer{
+height:1000px;
+width:1000px;
+background-color:gray;
+//padding:100px;
+border:1px solid black;
+margin-top:0px;
+
+}
+
+#outer{
+height:800px;
+width:700px;
+border:1px solid black;
+text-align:center;
+//padding:20px;
+margin-top:100px;
+margin-left:150px;
+background-color:lightgray;
+border-radius:100px 0px 100px 0px;
+}
+.fo p{
+margin-bottom:10px;
+font-size:50px;}
+hr{
+width:600px;}
+.nm{
+margin-top:25px;
+margin-left:50px;
+font-size:30px;
+text-align:left;
+}
+.te input {
+font-size:20px;
+height:50px;
+width:600px;
+box-shadow:4px 5px 5px black;
+border:none;
+border-radius:10px;}
+.su input{
+margin-top:50px;
+height:50px;
+width:200px;
+color: white;
+background-color:orange;
+border-radius:10px;
+box-shadow:5px 5px 2px black;
+border:none;
+font-size:25px;
+}
+.te inpute placeholder{
+font-size:30px;}
+input#fn{
+background-image:url("ic.png");
+background-repeat:no-repeat;
+background-position:6px;
+//border:1px solid #Dadada;
+padding-left:40px;
+}
+input#em{
+background-image:url("ma.png");
+background-repeat:no-repeat;
+background-position:6px;
+//border:1px solid #Dadada;
+padding-left:40px;
+}
+input#no{
+background-image:url("mo.png");
+background-repeat:no-repeat;
+background-position:6px;
+//border:1px solid #Dadada;
+padding-left:40px;
+}
+input#ad{
+background-size:29px;
+background-image:url("ho.png");
+background-repeat:no-repeat;
+background-position:8px;
+//border:1px solid #Dadada;
+padding-left:40px;
+}
+
+		
+	</style>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+<link href="css/style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+<div class="main_outer">
+<div id="outer"><form>
+<div class="fo"><p>Form<span style="color:orange;">Get</span></p></div>
+<hr>
+<div class="nm">Full Name</div>
+<div class="te"><input id="fn" type="text" placeholder="Full Name"></div>
+<div class="nm">Email</div>
+<div class="te"><input id="em" type="email" placeholder="xyz@gmail.com"></div>
+<div class="nm">Contact Number</div>
+<div class="te"><input id="no" type="number" placeholder="10 digt Number"></div>
+<div class="nm">Address</div>
+<div class="te"><input id="ad" type="textarea" placeholder="Full Name"></div>
+<div class="su"><input type="submit" value="Submit"></div>
+</form>
+
+</div>
+</div>
+</body>
+</html>

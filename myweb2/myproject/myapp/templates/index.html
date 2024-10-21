@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+<head>
+  <style>
+body{
+  background-image: url("{% static 'images/pn1.png'%}");
+}
+
+  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django project</title>
+</head>
+<body >
+  <!--<img src="{% static 'images/pn1.png'%}" alt="no images" width="500" height="500"/> -->
+    <h2> Employee Information system</h2>
+    
+    {% if msg   %}
+       <p style="color:greenyellow">{{msg}}</p>
+    {% endif  %}
+<form method="post" action="{%  url 'index'  %}">
+    {% csrf_token %}
+ <table>
+  <tr>
+    <td>Enter Employee id </td>
+    <td><input type="number" name="empid" placeholder="Enter Employee id"/></td>
+  </tr>
+  <tr>
+    <td>Enter Employee Name </td>
+    <td> <input type="text" name="empname" placeholder="Enter Employee Name"/></td>
+  </tr>
+  <tr>
+    <td>Select department</td>
+    <td> <select name="department"> 
+        <option>-Select department-</option>
+        <option value="Management">Management</option>
+        <option value="HR">HR</option>
+        <option value="Development">Development</option>
+        </select> 
+   </td>
+  </tr>
+  <tr>
+    <td>Enter Salary</td>
+    <td> <input type="number" name="salary" placeholder="Enter Salary"/></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td><Button type="submit" style="background-color: rgb(78, 78, 220);">Register</Button></td>
+  </tr>
+<table border="1">
+    <tr>
+<th>Employee Id</th>
+<th>Employee name</th>
+<th>Development</th>
+<th>Salary</th>
+<th>Delete</th>
+<th>Update</th>
+{% for e in empinfo %}
+<tr>
+<td>{{e.empid }}</td>
+<td>{{ e.empname }}</td>
+<td>{{ e.department }}</td>
+<td>{{ e.salary }}</td>
+<td><a href="{% url 'deleteemp' empid=e.empid %}" style="color:red">Delete</a></td>
+<td><a href="{% url 'updateemp' empid=e.empid %}" style="color:green">Update</a></td>
+</tr>
+{% endfor %}
+
+    </tr>
+</table>   
+</table>
+</form>
+</body>
+</html>

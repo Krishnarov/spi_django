@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    {% load static %}
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>nou</title>
+        <meta name="description" content="">
+        <link rel="stylesheet" href="{% static './css/style.css'%}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{%static 'css/bootstrap.css'%}">
+        <script src="{% static 'js/bootstrap.bundle.js'%}"></script>
+
+    </head>
+    <body>
+
+      
+        <div class="container">
+            <div class="row bg-danger text-light">
+                <div class="col-sm-4">contact no : 8726600653</div>
+                <div class="col-sm-4">Email Id: okji558810@gmai.com</div>
+                <div class="col-sm-4">Follow Us :</div>
+            </div>
+            <div class="row mt-2">
+                <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                    <div class="container-fluid">
+                      <a class="navbar-brand" href="#">Nalanda Open Univeersity</a>
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                          <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{% url 'nouapp:index'%}">Home</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="{% url 'nouapp:aboutus'%}">About Us</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="{% url 'nouapp:registration'%}">Registration</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="{% url 'nouapp:login'%}">Login</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="{% url 'nouapp:contactus'%}">Contact Us</a>
+                          </li>
+                        </ul>
+                        <form class="d-flex" role="search">
+                          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                          <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                      </div>
+                    </div>
+                  </nav>
+            </div>
+            <div class="row mt-2">
+                <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="{%static 'images/s1.jpg'%}" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="{%static 'images/s2.jpg'%}" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="{%static 'images/s3.jpg'%}" class="d-block w-100" alt="...">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+                  <div class="row mt-2">
+                <div class="col-sm-4"style="background-color:aqua; min-height:600px;"></div>
+                <div class="col-sm-8" style="background-color:aliceblue; min-height:600px;">
+                    {% block main %}
+
+
+
+                    {% endblock main%}
+                </div>
+                  </div>
+            <div class="row mt-2">
+              <div class="col-sm-4" style="min-height:250px; background-color:gray;"></div>
+              <div class="col-sm-4" style="min-height:250px; background-color:pink;"></div>
+              <div class="col-sm-4" style="min-height:250px; background-color:blue;"></div>
+            </div>  
+        </div>
+    </body>
+</html>

@@ -1,0 +1,86 @@
+Programing Language:-  Programming Language provides raw materials for software development.                           
+                                            Programming language provides syntaxes and semantics for software development.          def=syntax
+                       Type=          Python ,Java ,C , C++,Golang ,C#... etc are some popular programmming language.
+
+***************************************************************************************************************** *
+Framework:- Frameworks are installable softwares, they provides us pre-designed architecture.
+                        By using framework you can develop software application more easily within debad lines.
+
+******************************************************************************************************************
+Python:- 1. Web Development:- Django, Flask
+              2. Maschine Learning/Data Science/Artificial Intilevency:- Scikit-Learn, Keras, Theano... 
+Java:- Spring, Spring boot, Struts, JSF (Java Server Faces),Hibernate.
+PHP:- Laravel, Codeigniter, Cakephp.                                        
+.Net:- MVC Framework, Xamrine.
+
+*****************************************************************************************************************
+Django Framework:- Django is a web framework, written in python programming language. Django framework was originally 
+                                      Developed by Adrian Holovaty and Simon Willison in year 2005. Later on Django framework was accuired 
+                                      By Django Software Foundation. 
+                                      Django Web Framework follow MVT (Model-View-Template) architecture.
+
+*****************************************************************************************************************
+Model:- Model contain database part of your Django web application. 
+View:-  View contain bussiness logics for any task.
+Templates:- Templates are simple HTML files which contain HTML code and python code.
+
+*****************************************************************************************************************
+#Comand to install django framework:- pip install django.
+
+#Comand to create a django project:- django-admin startproject myproject. or python3 -m django startproject project2
+
+#Comand to run django project:- python manage.py runsever
+
+#To start server:-  python manage.py runserver
+
+#To stop server:- ctrl+c
+
+#Q.What is the structure of myproject?
+#Ans. 1.__init__.py:- __init__ file is a blank file, if this file is placed in any folder then that folder work like a package.
+        2.asgi.py:- asgi.py(asyncronous server Gatway interface)
+        3.setting.py:- settings.py contain different types of configuration of django project.
+        4.urls.py:-  urls.py file contain entry of all urls in your projects.
+        5.wsgi.py:-  wsgi.py(web server Gateway interface)
+        
+        #db.sqlite3
+        #manage.py
+                         1.manage.py:- manage.py file contain many commands which are utilized by django web application.
+                         2.db.sqlite3:- sqlite3 inbuilt database in django so db.sqlite3 contain database of django web application.
+
+#Command to create app in django:- python manage.py startapp myapp.
+
+#Q. How to add templete in django app?
+#Ans. 1. Create a folder with name 'templates' in myapp folder.
+          2. In 'templates' folder adda new html file with name 'index.html'.
+
+#migrate:- migrate command iis used to apply all changes in django web application.
+#migrate command=python manage.py migrate
+
+#Primary key:- primary key is a field in a table is used to identify each record uniquely.It is atomic and not null.
+
+#model creat and admin me model register krenge
+
+#After creation of model and registering model in admin.py file run following commands:- 1.python manage.py makemigrations
+                                                                                                                                      2.python manage.py migrate
+#How to create super user in django ?
+#python manage.py createsuperuser and get the enter press
+# Username(leave blank for'computername'):admin
+#Emailaddress :
+#Password:admin
+#Password again:admin press enter
+#Bypass password validation and create user anyway? [yes/no]:- press Y
+ then superuser create successfully.
+ then python manage.py runserver
+ then write in url of browser :- localhost:8000/admin , and refresh
+ then add emid,empname,department,salary and save 
+ then goto vscode in index.html and change h1 to h2 and write Employee Information system
+
+what is csrf?
+ jb client se server pr values transfer hoti hai to values incryption form me jati hai 
+incryption=a=b,b=c,c=d,z=a 
+boy= plane text
+cpz=cyper text , plane text ko cyper text me convert krna hi incyprion kahalata hai
+  cyper text ko plane text me convert krna hi discryption kahlata hai
+script let={%  %} ko kahte h 
+
+multiple change value=  Employee.objects.filter(empid=empid).update(empname=empname,department=department,salary=salary)
